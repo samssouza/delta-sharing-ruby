@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+set -vx
+
+# Install Ruby dependencies
+bundle install
+
+# Run any setup tasks
+echo "Setup complete! You can now run:"
+echo "  bin/console    # for an interactive prompt"
+echo "  bundle exec rake test    # to run tests"
