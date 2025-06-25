@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'delta-sharing'
+require 'delta_sharing'
 
 # Example of reading a Delta Sharing table with Apache Arrow
 

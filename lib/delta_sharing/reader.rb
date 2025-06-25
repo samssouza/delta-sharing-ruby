@@ -258,33 +258,4 @@ module DeltaSharing
       raise ProtocolError, "Failed to combine Arrow tables: #{e.message}"
     end
   end
-
-  #   # Change Data Feed options class
-  #   class CdfOptions
-  #     attr_reader :starting_version, :ending_version, :starting_timestamp, :ending_timestamp,
-  #                 :include_historical_metadata
-
-  #     def initialize(starting_version: nil, ending_version: nil, starting_timestamp: nil,
-  #                    ending_timestamp: nil, include_historical_metadata: false)
-  #       @starting_version = starting_version
-  #       @ending_version = ending_version
-  #       @starting_timestamp = starting_timestamp
-  #       @ending_timestamp = ending_timestamp
-  #       @include_historical_metadata = include_historical_metadata
-
-  #       validate!
-  #     end
-
-  #     private
-
-  #     def validate!
-  #       if starting_version && ending_version && starting_version > ending_version
-  #         raise ArgumentError, 'starting_version cannot be greater than ending_version'
-  #       end
-
-  #       return unless starting_timestamp && ending_timestamp && starting_timestamp > ending_timestamp
-
-  #       raise ArgumentError, 'starting_timestamp cannot be greater than ending_timestamp'
-  #     end
-  #   end
 end

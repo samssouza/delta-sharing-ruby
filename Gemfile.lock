@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    delta-sharing (0.1.0)
+    delta_sharing (0.1.0)
       httparty (~> 0.21.0)
       red-arrow (~> 19.0)
       red-arrow-dataset (~> 19.0)
@@ -82,7 +82,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  delta-sharing!
+  delta_sharing!
   minitest (~> 5.0)
   rake (~> 13.0)
   rubocop

@@ -117,7 +117,7 @@ module DeltaSharing
       raise Error, "Invalid JSON in profile file: #{e.message}"
     end
 
-    def make_request(path, method: 'GET', params: {}, body: {})
+    def make_request(path, method: 'GET', params: {}, body: nil)
       url = @profile['endpoint'] + path
 
       options = {
@@ -137,7 +137,7 @@ module DeltaSharing
       end
 
       # Add body for POST requests
-      options[:body] = body.to_json unless body.empty?
+      options[:body] = body.to_json unless body.nil?
 
       response = case method.upcase
                  when 'GET'

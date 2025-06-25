@@ -7,7 +7,7 @@ A Ruby implementation of the Delta Sharing Protocol for reading shared Delta Lak
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'delta-sharing'
+gem 'delta_sharing'
 ```
 
 And then execute:
@@ -16,20 +16,20 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install delta-sharing
+    $ gem install delta_sharing
 
 ## Usage
 
 ### Initialize the Client
 
 ```ruby
-require 'delta-sharing'
+require 'delta_sharing'
 
 client = DeltaSharing::Client.new('profile.json')
 ```
 or
 ```ruby
-require 'delta-sharing'
+require 'delta_sharing'
 
 client = DeltaSharing::Client.new(endpoint: "https://your-delta-sharing-server/delta-sharing/", bearerToken: "your-bearer-token")
 ```
@@ -61,6 +61,7 @@ tables = client.list_tables('share_name', 'schema_name')
 client = DeltaSharing::Client.new('profile.json')
 
 # Create a Reader json predicates hints can a string or a hash
+# Returns a Arrow:Table
 reader = DeltaSharing::Reader.new(table: "#{share_name}.#{schema_name}.#{table_name}", client: client)
 aarrow_table = reader.load_as_arrow(limit: 100, json_predicate_hints: '{ "op": "equal", "children": [ { "op": "column", "name": "active", "valueType": "int" }, { "op": "literal", "value": "1", "valueType": "int" } ] }', predicate_hints: ['active = 1'])
 

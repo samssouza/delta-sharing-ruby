@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'delta-sharing'
+require 'bundler/setup'
+require 'delta_sharing'
 
 # Initialize client with profile file
 # The profile file should contain:

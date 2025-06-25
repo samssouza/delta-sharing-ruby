@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'lib/delta-sharing/version'
+require_relative 'lib/delta_sharing/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'delta-sharing'
+  spec.name = 'delta_sharing'
   spec.version = DeltaSharing::VERSION
   spec.authors = ['Samuel Souza']
   spec.email = ['samuel.ssouza95@gmail.com']
@@ -38,7 +38,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'red-parquet', '~> 19.0'
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'webmock', '~> 3.18'
-
-  # For more information and examples about making a new gem, checkout our
-  # guide at: https://bundler.io/guides/creating_gem.html
 end
